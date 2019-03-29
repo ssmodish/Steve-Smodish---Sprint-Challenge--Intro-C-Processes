@@ -36,8 +36,8 @@ int main(int argc, char **argv)
     strcat(fullpath, "/");
     strcat(fullpath, f_name);
     // printf("%s\n", fullpath);
-    int f_size = stat(fullpath, &buf);
-    printf("%10d %s\n", f_size, f_name);
+    stat(fullpath, &buf);
+    printf("%10li %s\n", buf.st_size, f_name);
   }
 
 
